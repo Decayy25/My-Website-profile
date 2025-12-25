@@ -41,22 +41,10 @@ function renderPortfolio() {
       source_code: "https://github.com/Decayy25/math-formula.git"
     },
     {
-      title: "Gacha-box",
-      desc: "This system is often used in gacha games such as Counter Strike 2 and others.",
-      link: "#",
-      source_code: "https://github.com/Decayy25/Gacha-Box-in-a-game.git"
-    },
-    {
       title: "Gacha-Khodam",
       desc: "only for joke with friends, to summon khodam using gacha system.",
       link: "https://gacha-khodam-iota.vercel.app/",
       source_code: "https://github.com/Decayy25/Gacha-Khodam.git"
-    },
-    {
-      title: "Brute-force",
-      desc: "A program that can find out passwords using the brute-force method.",
-      link: "#",
-      source_code: "https://github.com/Decayy25/Brute-force"
     },
     {
       title: "tic-tac-toe",
@@ -65,23 +53,11 @@ function renderPortfolio() {
       source_code: "https://github.com/Decayy25/tic-tac-toe"
     },
     {
-      title: "Quiz-game",
-      desc: "A simple quiz game using C++ programming language.",
-      link: "#",
-      source_code: "https://github.com/Decayy25/Quiz-game"
-    },
-    {
       title: "E-Commerce Website",
       desc: "A simple e-commerce website using HTML, CSS, Tailwind, and JavaScript.",
       link: "mini-project/JavaScript/Ashbatten-Store/index.html",
       source_code: "https://github.com/Decayy25/my-quest-from-teacher.git"
     },
-    {
-      title: "color-picker",
-      desc: "A simple color picker app using HTML, CSS, Tailwind, and JavaScript.",
-      link: "mini-project/JavaScript/color-picker/index.html",
-      source_code: "https://github.com/Decayy25/color-picker.git"
-    }
   ];
 
   const container = document.getElementById('my-portfolio');
