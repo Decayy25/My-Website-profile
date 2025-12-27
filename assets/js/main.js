@@ -60,12 +60,12 @@ function renderPortfolio() {
     },
   ];
 
-  const container = document.getElementById('my-portfolio');
+  const container = document.getElementById('my-project');
   if (!container) return;
 
   container.innerHTML = portfolioData.map((item, index) => `
     <div 
-      class="p-4 bg-white rounded shadow"
+      class="p-8 bg-white rounded shadow"
       data-aos="fade-up"
       data-aos-delay="${index * 100}"
     >
