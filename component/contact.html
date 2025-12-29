@@ -6,19 +6,20 @@
   <title>Ashbatten Official</title>
 
   <!-- Style -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kalam:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" rel="stylesheet">
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  
+          
   <!-- favicon -->
   <link rel="icon" href="../assets/img/icon.png" type="image/png">
 
   <!-- AOS Animation CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
   <header class="fixed top-0 w-full z-50 bg-blue-500 p-4 flex justify-between items-center">
@@ -27,24 +28,22 @@
       <a href="../index.html" class="px-3 py-1 nav-link">Home</a>
       <a href="../index.html" class="px-3 py-1 nav-link">About</a>
       <a href="portfolio.html" class="px-3 py-1 nav-link">Portfolio</a>
-      <a href="#contact" class="px-3 py-1 nav-link">Contact</a>
+      <a href="#" class="px-3 py-1 nav-link">Contact</a>
     </nav>
     <button id="menu-toggle" class="md:hidden">☰</button>
   </header>
-
   <div id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full bg-gray-900 p-4 space-y-2 hidden z-40">
     <a href="../index.html" class="text-white hover:text-blue-500 ">Home</a>
     <a href="../index.html" class="text-white hover:text-blue-500">About</a>
     <a href="portfolio.html" class="text-white hover:text-blue-500">Portfolio</a>
-    <a href="#contact" class="text-white hover:text-blue-500">Contact</a>
+    <a href="#" class="text-white hover:text-blue-500">Contact</a>
   </div>
 
-  <div class="h-8 bg-gray-300 my-4 "></div>
-
-  <main class="container mx-auto px-4">
+  <main class="container mx-auto px-4 mt-32 mb-16">
     <!-- Contact -->
+    <div class="bg-white bg-white p-6 mt-4 rounded-xl shadow" data-aos="fade-up">
     <h2 class="text-3xl font-semibold mt-8" id="contact">Contact</h2>
-    <div class="bg-white p-6 rounded shadow mt-4 flex flex-col md:flex-row gap-6">
+    <div class="bg-white p-6 mt-4 flex flex-col md:flex-row gap-6">
       <div class="md:w-1/2 w-full" data-aos="fade-left" data-aos-delay="500">
         <p class="mb-2">Feel free to contact me at:</p>
         <p>Email: <a href="mailto:ashbattenofficial@gmail.com" class="text-blue-500">ashbattenofficial@gmail.com</a></p>
@@ -68,10 +67,12 @@
           </iframe>
         </div>
       </div>
+    </div>
   </main>
 
+  <div class="mt-32"></div>
   <!-- Footer -->
-  <footer class="footer mt-12 flex flex-col justify-center items-center p-6 bg-gray-900 text-white">
+  <footer class="footer mt-48 flex flex-col justify-center items-center p-6 bg-gray-900 text-white">
     <div class="social flex justify-between w-32 mb-4">
       <a href="https://www.instagram.com/rizqi5836/" class="hover:text-blue-500">
         <i data-feather="instagram"></i>
@@ -87,10 +88,10 @@
     </div>
 
     <div class="links flex gap-4 mb-4">
-      <a href="#../index.html">Home</a>
+      <a href="../index.html">Home</a>
       <a href="../index.html">About</a>
       <a href="portfolio.html">Portfolio</a>
-      <a href="#contact">Contact</a>
+      <a href="#">Contact</a>
     </div>
 
     <div class="credit mb-4">
@@ -103,11 +104,11 @@
   
   <!-- Script -->
   <script src="https://unpkg.com/feather-icons"></script>
-  <script src="./../assets/js/Tailwind.js"></script>
   <script src="../assets/js/main.js"></script>
   <script>renderPortfolio()</script>
   <script>feather.replace()</script>
   <script>AOS.init({ duration: 1000, once: true });</script>
   <script>AOS.refresh();</script>
+  <script>renderSkills();</script>
 </body>
 </html>

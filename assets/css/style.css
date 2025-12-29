@@ -2,13 +2,18 @@
   --primary-color: #0f172a;
   --accent-color: #3b82f6;
   --text-color: #1e293b;
-  --bg-color: #f1f5f9;
 }
 body {
-  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(59,130,246,0.4), rgba(59,130,246,0.4)), url(../img/Background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #3B82F6;
   color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }

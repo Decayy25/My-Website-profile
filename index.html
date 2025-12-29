@@ -22,7 +22,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <header class="fixed top-0 w-full z-50 bg-blue-500 p-4 flex justify-between items-center">
+  <header class="fixed top-0 w-full z-50 p-4 flex justify-between items-center">
     <div class="text-2xl font-bold ml-5">Ashbatten</div>
     <nav class="navbar desktop space-x-4">
       <a href="#home" class="px-3 py-1 nav-link">Home</a>
@@ -33,6 +33,7 @@
     <button id="menu-toggle" class="md:hidden">☰</button>
   </header>
 
+
   <div id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full bg-gray-900 p-4 space-y-2 hidden z-40">
     <a href="#home" class="text-white hover:text-blue-500 ">Home</a>
     <a href="#about" class="text-white hover:text-blue-500">About</a>
@@ -41,7 +42,7 @@
   </div>
 
   <!-- Hero Section -->
-   <section id="home"class="bg-blue-500 text-white pt-24 md:pt-0 min-h-[90vh] md:min-h-screen flex items-center">
+    <section id="home" class="bg-blue-500 text-white pt-24 md:pt-0 min-h-[90vh] md:min-h-screen flex items-center pb-0">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-between">
       <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
       <h1 class="text-4xl md:text-5xl font-bold">Ashbatten Official</h1>
@@ -61,49 +62,58 @@
   </section>
 
 
-  <div class="h-8 bg-gray-300 my-4 "></div>
+    <main>
+      <div class="bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-semibold pt-4 mt-0" id="about" data-aos="fade-up">About US</h2>
+          <div class="flex flex-col items-center mt-6">
+          <!-- Foto Profil -->
+          <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-500 mb-4" data-aos="zoom-in">
+          <img src="assets/img/profile.png" alt="Foto Profil" class="w-full h-full object-cover">
+          </div>
 
-  <main class="container mx-auto px-4">
-    <h2 class="text-3xl font-semibold mt-8" id="about" data-aos="fade-up">About US</h2>
-    <div class="flex flex-col items-center mt-6">
-      <!-- Foto Profil -->
-      <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-500 mb-4" data-aos="zoom-in">
-        <img src="assets/img/profile.png" alt="Foto Profil" class="w-full h-full object-cover">
+            <!-- Teks About -->
+            <div>
+              <p class="text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="100">My name is Rizqi, an 11th-grade student who 
+                just wanted to create a simple website because I wanted to be a web developer.</p>
+              <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="200">I first learned programming in 10th grade. I hadn't had a career yet
+                because I was still underage.</p>
+              <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="300">I also know a little about network configuration because I studied 
+                Network Engineering</p>
+              <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="400">
+                I also created a simple project that I made when I was in 10th grade, which you can see in the Portfolio section,
+              </p>
+              <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="500">
+                i also created a simple project that I made when I was in 11th grade, which you can see in the Portfolio section,
+                and i am a member of 
+                <a class="add-btn bg-blue-600 text-white px-2 py-1 rounded font-semibold" href="https://www.facebook.com/share/g/1BGmXwFcp9/">IMPHNEN</a> of Facebook group
+              </p>
+              <div class="flex justify-center mt-8">
+                <img src="assets/img/IMPHNEN.png" class="w-96 mx-auto" alt="Gambar IMPHNEN" data-aos="zoom-in-up">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Teks About -->
-      <div>
-        <p class="text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="100">My name is Rizqi, an 11th-grade student who 
-          just wanted to create a simple website because I wanted to be a web developer.</p>
-        <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="200">I first learned programming in 10th grade. I hadn't had a career yet
-          because I was still underage.</p>
-        <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="300">I also know a little about network configuration because I studied 
-          Network Engineering</p>
-        <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="400">
-          I also created a simple project that I made when I was in 10th grade, which you can see in the Portfolio section,
-        </p>
-        <p class="mt-4 text-xl leading-relaxed text-center" data-aos="fade-up" data-aos-delay="500">
-          i also created a simple project that I made when I was in 11th grade, which you can see in the Portfolio section,
-          and i am a member of 
-          <a class="add-btn bg-blue-600 text-white px-2 py-1 rounded font-semibold" href="https://www.facebook.com/share/g/1BGmXwFcp9/">IMPHNEN</a> of Facebook group
-        </p>
-        <div class="flex justify-center mt-8">
-          <img src="assets/img/IMPHNEN.png" class="w-96 mx-auto" alt="Gambar IMPHNEN" data-aos="zoom-in-up">
+
+        <div class="mt-64"></div>
+
+        <!-- Portfolio -->
+        <div class="bg-white mt-12 pb-8">
+          <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-semibold mt-0 pt-8" id="portfolio">Portfolio</h2>
+          <h3 class="text-2xl font-semibold mt-4">My Projects</h3>
+          <div class="grid gap-4 md:grid-cols-3 mt-4" id="my-project"></div>
+
+          <h3 class="text-3xl font-semibold mt-8">Language & Framework | use</h3>
+          <div class="grid gap-4 md:grid-cols-5 mt-4" id="my-skills"></div>
         </div>
-    </div>
-  </div>
-
-    <!-- Portfolio -->
-    <h2 class="text-3xl font-semibold mt-8" id="portfolio">Portfolio</h2>
-    <h3 class="text-2xl font-semibold mt-4">My Projects</h3>
-    <div class="grid gap-4 md:grid-cols-3 mt-4" id="my-project"></div>
-
-    <h3 class="text-3xl font-semibold mt-8">Language & Framework | use</h3>
-    <div class="grid gap-4 md:grid-cols-5 mt-4" id="my-skills"></div>
+      </div>
   </main>
 
   <!-- Footer -->
-  <footer class="footer mt-12 flex flex-col justify-center items-center p-6 bg-gray-900 text-white">
+  <footer class="footer mt-48 flex flex-col justify-center items-center p-6 bg-gray-900 text-white">
     <div class="social flex justify-between w-32 mb-4">
       <a href="https://www.instagram.com/rizqi5836/" class="hover:text-blue-500">
         <i data-feather="instagram"></i>
@@ -135,7 +145,6 @@
   
   <!-- Script -->
   <script src="https://unpkg.com/feather-icons"></script>
-  <script src="./assets/js/Tailwind.js"></script>
   <script src="assets/js/main.js"></script>
   <script>renderPortfolio()</script>
   <script>feather.replace()</script>
