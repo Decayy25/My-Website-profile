@@ -43,7 +43,7 @@ header.scrolled {
   color: #3B82F6;
   border: 2px solid white;
 }
-#hero {
+#home {
   background: var(--accent-color);
   color: white;
   display: flex;
@@ -67,9 +67,7 @@ header.scrolled {
   padding: 1rem 0;
   margin-top: 4rem;
 }
-#mobile-menu {
-  display: none;
-}
+
 @media (max-width: 768px) {
   .navbar.desktop {
     display: none;
@@ -78,9 +76,9 @@ header.scrolled {
     display: block;
     background: var(--primary-color);
   }
-#mobile-menu a {
+  #mobile-menu a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     border-top: 1px solid #334155;
   }
 }
