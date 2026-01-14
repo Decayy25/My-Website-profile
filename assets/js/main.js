@@ -5,6 +5,10 @@ menuToggle.addEventListener('click', () => {
   mobileMenu.classList.toggle('show');
 });
 
+window.addEventListener("resize", () => {
+  renderSkills();
+});
+
 // Scroll Header
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
@@ -88,39 +92,56 @@ function renderPortfolio() {
 // Langguage & Framework Section
 function renderSkills() {
   const skillsData = [
-    { name: "TypeScript", aos: 'fade-up', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
-    { name: "Tailwind CSS", aos: 'fade-left', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
-    { name: "C++", aos: 'fade-down', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" },
-    { name: "Git", aos: 'fade-up', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg" },
-    { name: "React", aos: 'fade-left', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
-    { name: "Node.js", aos: 'fade-down', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg" },
-    { name: "MongoDB", aos: 'fade-right', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg" },
-    { name: "Express", aos: 'fade-right', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
-    { name: "Nextjs", aos: 'fade-down', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
-    { name: "React Native", aos: 'fade-right', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original-wordmark.svg" },
+    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
+    { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+    { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+    { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" },
+    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg" },
+    { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+    { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg" },
+    { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg" },
+    { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+    { name: "Nextjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+    { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original-wordmark.svg" },
   ];
 
-  const container = document.getElementById('my-skills');
-  if (!container) return;
-  container.innerHTML = skillsData.map((skill, index) => `
-    <div 
-      class="p-6 bg-white hover:border-2 hover:border-blue-500 p-6 shadow-lg hover:scale-105 transition rounded-2xl flex flex-col items-center text-center"
-      data-aos="${skill.aos}"
-      data-aos-delay="${index * 100}"
-    >
-      <img src="${skill.icon}" alt="${skill.name} Icon" class="w-32 h-32 mb-4" />
-      <h4 class="text-lg font-semibold">${skill.name}</h4>
-    </div>
-  `).join('');
-  AOS.refresh();
-}
+  const desktopAOS = [
+    "fade-up-right",
+    "fade-up",
+    "fade-up-left"
+  ];
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderPortfolio();
-  renderSkills();
-});
-AOS.init({
-  duration: 800,
-  easing: 'slide',
-  once: true,
-});
+  const container = document.getElementById("my-skills");
+  if (!container) return;
+
+  const mobile = isMobile();
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+
+  container.innerHTML = skillsData.map((skill, index) => {
+    const aos = mobile
+      ? "fade-up"
+      : desktopAOS[index % desktopAOS.length];
+
+    return `
+      <div
+        class="p-6 bg-white hover:border-2 hover:border-blue-500 shadow-lg hover:scale-105 transition rounded-2xl flex flex-col items-center text-center"
+        data-aos="${aos}"
+        data-aos-delay="${index * 100}"
+      >
+        <img src="${skill.icon}" alt="${skill.name} Icon" class="w-32 h-32 mb-4" />
+        <h4 class="text-lg font-semibold">${skill.name}</h4>
+      </div>
+    `;
+  }).join("");
+
+  AOS.refresh();
+  AOS.init({
+    duration: 800,
+    easing: "ease-out-cubic",
+    once: true,
+  });
+}
